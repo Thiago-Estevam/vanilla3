@@ -1,0 +1,781 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+header {
+  background-color: black;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  height: 88px;
+  padding: 0 20px;
+}
+
+.menu .logo img {
+  width: 189px;
+  height: 42px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar input {
+  width: 291px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 0 15px;
+  background-color: rgba(221, 221, 221, 0);
+  color: rgb(255, 255, 255);
+}
+
+.search-bar .search-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar .search-btn img {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-actions .btn {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.menu-options {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.menu-icon {
+  margin-left: 20px;
+}
+
+.menu-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.divider {
+  color: #fff;
+  margin-left: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu .search-bar input {
+    width: 100%;
+  }
+
+  .menu-options {
+    margin-top: 10px;
+  }
+
+  .menu-button,
+  .menu-icon {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%; /* Ocupa toda a largura da tela */
+  max-width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; /* Ajustado para o número de slides (3) */
+}
+
+.carousel-slide {
+  min-width: 100vw; /* Cada slide ocupa 100% da largura da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 20px;
+}
+
+.circle {
+  width: 250px; /* Aumentei ainda mais o círculo */
+  height: 250px; /* Aumentei ainda mais o círculo */
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 80px; /* Aumentei o espaçamento entre o círculo e o texto */
+}
+
+.circle img {
+  width: 95%; /* Aumentei o tamanho da imagem dentro do círculo */
+  height: 95%;
+  object-fit: contain;
+}
+
+.info {
+  color: #ddd;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.info h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Aumentei o tamanho da fonte do título */
+}
+
+.buy-btn {
+  background-color: black;
+  color: white;
+  padding: 18px 36px; /* Aumentei o tamanho do botão */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem; /* Aumentei o tamanho do texto no botão */
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 100;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .circle {
+    width: 180px; /* Ajustei o círculo para telas menores */
+    height: 180px;
+    margin-right: 50px;
+  }
+
+  .info h2 {
+    font-size: 2rem; /* Ajuste do texto para tamanhos menores */
+  }
+
+  .buy-btn {
+    padding: 14px 28px;
+    font-size: 1.2rem; /* Ajuste no tamanho do botão em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .circle {
+    width: 160px;
+    height: 160px;
+    margin-right: 0; /* Para telas menores, o layout será vertical */
+  }
+
+  .info h2 {
+    font-size: 1.8rem; /* Ajuste para telas muito pequenas */
+  }
+
+  .buy-btn {
+    padding: 12px 24px;
+    font-size: 1rem; /* Botão reduzido para telas pequenas */
+  }
+
+  .carousel-slide {
+    flex-direction: column; /* Elementos em coluna em telas pequenas */
+    align-items: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%; /* Ocupa toda a largura da tela */
+  max-width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  background-image: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"); /* Caminho da imagem de fundo */
+  background-size: cover; /* A imagem cobrirá toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Mantém a imagem fixa no fundo */
+  border: 10px solid black;
+  box-shadow: 0px 80px 80px rgba(0, 0, 0, 0.623); /* sombra apenas na parte de baixo */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; /* Ajustado para o número de slides (3) */
+}
+
+.carousel-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 80px;
+}
+
+/* Camada de fundo desfocada */
+.circle-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(37, 230, 255, 0.603); /* Fundo do círculo */
+  filter: blur(20px); /* Aplica o efeito de desfoque ao círculo */
+  z-index: 1;
+}
+
+/* Conteúdo dentro do círculo (a imagem nítida) */
+.circle-content {
+  position: relative;
+  z-index: 2; /* Garante que a imagem fique acima da camada desfocada */
+}
+
+.circle-content img {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+}
+
+/* Estilo das informações ao lado do círculo */
+.info {
+  text-align: left;
+}
+
+.info h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.buy-btn {
+  background-color: black;
+  color: white;
+  padding: 18px 36px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 100;
+}
+
+.left-btn {
+  left: 120px; /* Trouxe o botão da esquerda mais para o centro */
+}
+
+.right-btn {
+  right: 120px; /* Trouxe o botão da direita mais para o centro */
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .circle {
+    width: 180px;
+    height: 180px;
+    margin-right: 50px;
+  }
+
+  .info h2 {
+    font-size: 2rem;
+  }
+
+  .buy-btn {
+    padding: 14px 28px;
+    font-size: 1.2rem;
+  }
+
+  .left-btn {
+    left: 20px; /* Ajuste para telas menores */
+  }
+
+  .right-btn {
+    right: 20px; /* Ajuste para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .circle {
+    width: 160px;
+    height: 160px;
+    margin-right: 0;
+  }
+
+  .info h2 {
+    font-size: 1.8rem;
+  }
+
+  .buy-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .carousel-slide {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .left-btn {
+    left: 15px; /* Ajuste para telas muito pequenas */
+  }
+
+  .right-btn {
+    right: 15px; /* Ajuste para telas muito pequenas */
+  }
+}
+.box {
+  width: 300px;
+  height: 200px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.699); /* sombra apenas na parte de baixo */
+}
+.topic-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden; /* Garante que a rolagem funcione corretamente */
+  width: 100%; /* Garante que o carrossel use 100% da largura */
+}
+
+.topic-carousel {
+  display: flex;
+  justify-content: flex-start; /* Itens alinhados à esquerda */
+  align-items: center;
+  overflow-x: hidden; /* Permite a rolagem horizontal */
+  scroll-behavior: smooth; /* Suaviza a rolagem */
+  width: 100%; /* Garante que o carrossel use 100% da largura */
+  padding: 10px 0; /* Adiciona um pouco de espaço acima e abaixo */
+}
+
+.topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 120px; /* Espaçamento entre os círculos */
+}
+
+/* Tamanho dos círculos ajustado para 160px */
+.topic-circle {
+  width: 160px; /* Mantido em 160px */
+  height: 160px; /* Mantido em 160px */
+  border: 3.5px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para efeito de "flutuar" */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.topic-circle:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.521); /* Sombra mais forte ao passar o mouse */
+}
+
+.topic img {
+  width: 50%; /* Ajusta os ícones dentro do círculo */
+  height: 50%; /* Ajusta os ícones dentro do círculo */
+  object-fit: contain;
+}
+
+.topic p {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Estilos para as setas de navegação */
+.topic-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Seta esquerda */
+.left-topic-arrow {
+  left: 10px;
+}
+
+.left-topic-arrow::before,
+.left-topic-arrow::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: black;
+}
+
+.left-topic-arrow::before {
+  transform: rotate(135deg);
+  left: 50%;
+}
+
+.left-topic-arrow::after {
+  transform: rotate(45deg);
+  left: 50%;
+}
+
+/* Seta direita */
+.right-topic-arrow {
+  right: 10px;
+}
+
+.right-topic-arrow::before,
+.right-topic-arrow::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: black;
+}
+
+.right-topic-arrow::before {
+  transform: rotate(-45deg);
+  left: 50%;
+}
+
+.right-topic-arrow::after {
+  transform: rotate(-135deg);
+  left: 50%;
+}
+
+/* Scroll personalizado para o carrossel */
+.topic-carousel::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem padrão */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .topic-circle {
+    width: 25vw; /* Aumenta a largura em dispositivos menores */
+    height: 25vw; /* Aumenta a altura em dispositivos menores */
+  }
+
+  .topic {
+    margin: 0 20px; /* Ajusta o espaçamento em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .topic-circle {
+    width: 35vw; /* Ajusta para ainda maior em telas muito pequenas */
+    height: 35vw; /* Ajusta para ainda maior em telas muito pequenas */
+  }
+
+  .topic {
+    margin: 0 10px; /* Reduz ainda mais o espaçamento */
+  }
+}
+.topica a {
+  color: #000;
+  text-decoration: none;
+}
+.topic-carousel-container a {
+  color: #000;
+  text-decoration: none;
+}
+/* Caixa de produto no estilo dos círculos */
+/* Caixa de produto sem sombra inicialmente */
+/* Caixa de produto no estilo dos círculos */
+/* Caixa de produto com fundo fixo */
+.product-box {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 300px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+  background-color: transparent;
+
+  /* Fundo do carousel aplicado às caixas de produto */
+  background-image: url(""); /* Substitua pelo caminho da imagem */
+  background-size: cover; /* Faz a imagem preencher a caixa */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Fixa o fundo */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição de escala e sombra */
+  box-shadow: none; /* Sem sombra inicialmente */
+}
+
+/* Sombra e aumento ao passar o mouse (hover) */
+.product-box:hover {
+  text-decoration: none;
+  transform: scale(1.1); /* Aumenta a caixa em 10% */
+  box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.653); /* Adiciona sombra ao hover */
+  transition-delay: 100ms; /* Pequeno atraso para a transição */
+
+}
+
+/* Mudança de cor da sombra após 300ms */
+.product-box:hover {
+  text-decoration: none;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.734); /* Mudança de cor da sombra */
+}
+
+.product-image img {
+  width: 80%; /* Ajusta a imagem */
+  height: auto;
+  margin-top: 15px;
+}
+
+.product-info h3 {
+  font-size: 20px;
+  margin: 15px 0 5px;
+  color: rgb(0, 0, 0); /* Texto branco */
+}
+
+.product-info p {
+  font-size: 30px;
+  color: rgb(255, 255, 255); /* Cor do preço */
+  text-shadow: 4px 4px 2px black,
+    /* Sombras para criar a "borda" preta */ 1px -1px 0px black,
+    -1px 1px 0px black, -1px -1px 0px black, 1px 1px 0px black;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap; /* Flexbox para permitir várias linhas */
+  justify-content: space-between; /* Espaçamento entre as colunas */
+  gap: 60px; /* Espaço entre as caixas */
+  max-width: 100%; /* Para o grid ocupar a largura total */
+  margin: 0 auto; /* Centraliza a grid na página */
+  padding: 90px;
+}
+footer {
+  background-color: #000; /* Fundo preto */
+  padding: 40px 0;
+  color: #ccc; /* Letras cinza */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+/* Seções (Institucional, Dúvidas, Ajuda) */
+.footer-sections {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff; /* Título branco */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section ul li a {
+  color: #ccc; /* Links cinza */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff; /* Mudar cor ao passar o mouse */
+}
+
+/* Divisão e redes sociais */
+.social-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.divider {
+  border-left: 2px solid #ccc; /* Traço vertical */
+  height: 100px;
+  margin: 0 30px;
+}
+
+.social-links p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Botões da Apple Store e Play Store */
+.store-buttons a {
+  display: inline-block;
+  margin: 10px;
+}
+
+.store-buttons img {
+  width: 130px;
+  transition: transform 0.3s ease;
+}
+
+.store-buttons a:hover img {
+  transform: scale(1.05); /* Zoom no hover */
+}
